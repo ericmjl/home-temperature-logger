@@ -13,7 +13,8 @@ def sleep_till_next_minute():
     curr_time = datetime.now()
     next_time = datetime(curr_time.year, curr_time.month, curr_time.day,
                          curr_time.hour, curr_time.minute + 1, 0)
-
+    print('Current time: {0}'.format(curr_time))
+    print('Next time: {0}'.format(next_time))
     td = next_time - curr_time
     sleep(td.total_seconds())
 
