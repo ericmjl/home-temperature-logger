@@ -11,7 +11,7 @@ sense = SenseHat()
 
 def sleep_till_next_minute():
     curr_time = datetime.now()
-    next_time = curr_time + timedelta(seconds=60-curr_time.seconds) - timedelta(microseconds=curr_time.microsecond)
+    next_time = curr_time + timedelta(seconds=60-curr_time.second) - timedelta(microseconds=curr_time.microsecond)
     print('Current time: {0}'.format(curr_time))
     print('Next time: {0}'.format(next_time))
     td = next_time - curr_time
