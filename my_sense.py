@@ -15,6 +15,6 @@ while True:
     print(temperature)
     db.insert({'year': curr_time.year, 'month': curr_time.month,
                'day': curr_time.day, 'hour': curr_time.hour,
-               'minute': curr_time.minute, 'second', curr_time.second,
+               'minute': curr_time.minute, 'second': curr_time.second,
                'temperature': temperature})
     sleep(1)
