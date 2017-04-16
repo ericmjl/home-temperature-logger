@@ -1,5 +1,5 @@
 from sense_hat import SenseHat
-from time import sleep, now
+from time import sleep
 from tinydb import TinyDB, where
 from datetime import datetime
 
