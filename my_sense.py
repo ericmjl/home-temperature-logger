@@ -9,6 +9,14 @@ sense = SenseHat()
 
 # sense.show_message(str(temperature))
 
+def sleep_till_next_minute():
+    curr_time = datetime.now()
+    next_time = datetime(curr_time.year, curr_time.month, curr_time.day,
+                         curr_time.hour, curr_time.minute + 1, 0)
+
+    td = next_time - curr_time
+    sleep(td.total_seconds())
+
 while True:
     curr_time = datetime.now()
     temperature = sense.get_temperature()
@@ -17,4 +25,4 @@ while True:
                'day': curr_time.day, 'hour': curr_time.hour,
                'minute': curr_time.minute, 'second': curr_time.second,
                'temperature': temperature})
-    sleep(1)
+    sleep_till_next_minute()
